@@ -146,7 +146,7 @@ while True:
         print(f"\n{BLUE}Processing token: {token}{RESET}")
         for i in range(1):
             count = random.randint(510, 520)
-            response = send_request(available_taps, count, token, secret_hex)
+            response = send_request(available_taps, count, token)
             
             if "error" in response:
                 print(f"{RED}Error on request {i + 1}/4: {response['error']}{RESET}")
