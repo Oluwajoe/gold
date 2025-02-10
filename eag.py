@@ -116,7 +116,7 @@ def send_request(available_taps, count, token, max_retries=3):
                 "count": count,
                 "timestamp": int(time.time()),
                 "salt": str(uuid.uuid4()),
-                "nonce": nonce,
+                #"nonce": nonce,
             }
             response = requests.post(url, headers=headers, json=data, timeout=10)
             response.raise_for_status()
